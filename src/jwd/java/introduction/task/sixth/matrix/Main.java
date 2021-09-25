@@ -13,8 +13,6 @@ public class Main {
     public static void main(String[] args) {
         ArrayTransformer transformer = new ShiftArrayTransformer();
         int[][] result = transformer.transform(new int[]{1, 2, 3, 4, 5});
-        for (int[] row : result) {
-            LOGGER.log(Level.INFO, "{0}", Arrays.toString(row));
-        }
+        LOGGER.log(Level.INFO, "{0}", Arrays.deepToString(result));
     }
 }
