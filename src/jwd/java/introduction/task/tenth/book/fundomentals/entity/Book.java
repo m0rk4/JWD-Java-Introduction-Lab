@@ -1,15 +1,17 @@
 package jwd.java.introduction.task.tenth.book.fundomentals.entity;
 
-public class Book implements Cloneable {
+public class Book implements Comparable<Book>, Cloneable {
     private static int edition;
     private final String title;
     private final String author;
     private final int price;
+    private final String isbn;
 
-    public Book(String title, String author, int price) {
+    public Book(String title, String author, int price, String isbn) {
         this.title = title;
         this.author = author;
         this.price = price;
+        this.isbn = isbn;
     }
 
     @Override
@@ -47,5 +49,16 @@ public class Book implements Cloneable {
     @Override
     public Object clone() throws CloneNotSupportedException {
         return super.clone();
+    }
+
+    @Override
+    public int compareTo(Book o) {
+        if (isbn == o.isbn) {
+            return 0;
+        }
+        if (o.isbn == null) {
+            return 1;
+        }
+        return isbn == null ? -1 : isbn.compareTo(o.isbn);
     }
 }
