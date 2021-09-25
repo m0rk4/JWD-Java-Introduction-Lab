@@ -1,7 +1,7 @@
-package jwd.java.introduction.task.fifth.lis;
+package jwd.java.introduction.task.fifth.longest.increasing.sequence;
 
-import jwd.java.introduction.task.fifth.lis.logic.LongestIncreasingSequenceCalculator;
-import jwd.java.introduction.task.fifth.lis.logic.impl.LongestIncreasingSequenceCalculatorImpl;
+import jwd.java.introduction.task.fifth.longest.increasing.sequence.logic.LongestIncreasingSequenceCalculator;
+import jwd.java.introduction.task.fifth.longest.increasing.sequence.logic.impl.LongestIncreasingSequenceCalculatorImpl;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
