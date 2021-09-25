@@ -1,6 +1,6 @@
 package jwd.java.introduction.task.tenth.book.fundomentals.entity;
 
-public class Book {
+public class Book implements Cloneable {
     private static int edition;
     private final String title;
     private final String author;
@@ -42,5 +42,10 @@ public class Book {
                 ", author='" + author + '\'' +
                 ", price=" + price +
                 '}';
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }
