@@ -1,5 +1,8 @@
 package jwd.java.introduction.task.first.math.calculations;
 
+import jwd.java.introduction.task.first.math.calculations.logic.FormulaCalculator;
+import jwd.java.introduction.task.first.math.calculations.logic.impl.FormulaCalculatorImpl;
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -7,6 +10,9 @@ public class Main {
     private static final Logger LOGGER = Logger.getLogger(Main.class.getName());
 
     public static void main(String[] args) {
-        LOGGER.log(Level.INFO, "Hello, World!");
+        FormulaCalculator calculator = new FormulaCalculatorImpl();
+        double result = calculator.calculate(1.5, 2.0);
+        String message = String.format("%f", result);
+        LOGGER.log(Level.INFO, message);
     }
 }
