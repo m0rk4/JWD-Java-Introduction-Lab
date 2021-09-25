@@ -12,7 +12,6 @@ public class Main {
     public static void main(String[] args) {
         FormulaCalculator calculator = new FormulaCalculatorImpl();
         double result = calculator.calculate(1.5, 2.0);
-        String message = String.format("%f", result);
-        LOGGER.log(Level.INFO, message);
+        LOGGER.log(Level.INFO, "{0}", result);
     }
 }
