@@ -1,5 +1,7 @@
 package jwd.java.introduction.task.tenth.book.fundomentals.entity;
 
+import jwd.java.introduction.task.tenth.book.fundomentals.util.ObjectUtils;
+
 public class Book implements Comparable<Book>, Cloneable {
     private static int edition;
     private final String title;
@@ -12,6 +14,18 @@ public class Book implements Comparable<Book>, Cloneable {
         this.author = author;
         this.price = price;
         this.isbn = isbn;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public int getPrice() {
+        return price;
     }
 
     @Override
@@ -53,12 +67,6 @@ public class Book implements Comparable<Book>, Cloneable {
 
     @Override
     public int compareTo(Book o) {
-        if (isbn == o.isbn) {
-            return 0;
-        }
-        if (o.isbn == null) {
-            return 1;
-        }
-        return isbn == null ? -1 : isbn.compareTo(o.isbn);
+        return ObjectUtils.compare(this.isbn, o.isbn);
     }
 }
