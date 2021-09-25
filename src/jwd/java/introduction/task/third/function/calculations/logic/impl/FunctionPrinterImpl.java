@@ -13,7 +13,7 @@ public class FunctionPrinterImpl implements FunctionPrinter {
     @Override
     public void print(DoubleUnaryOperator function, double step, double start, double end) throws FunctionPrinterException {
         if (function == null) {
-            throw new FunctionPrinterException("Function ius null.");
+            throw new FunctionPrinterException("Function is null.");
         }
         if (step < 0) {
             throw new FunctionPrinterException("Step is less than zero.");
